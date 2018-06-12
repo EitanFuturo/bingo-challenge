@@ -49,6 +49,6 @@ footer .tombola:hover {
   transform: scale(1.05);
   transition: all 300ms ease;
 }
-footer .elegida {
-  background: #ff8ac9;
+.elegida {
+  background: #ff8ac9 !important;
 }
