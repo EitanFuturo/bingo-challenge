@@ -1,4 +1,5 @@
 let bolillasElegidas = [91];
+let unica = false;
 
 //Creo la grilla de bolillas
   for (let x = 1; x <= 90; x++) {
@@ -15,15 +16,20 @@ let bolillasElegidas = [91];
       let bolElegida = Math.floor(Math.random() * 90);
       console.log('random' + bolElegida);
       bolillasElegidas.forEach(element => {
-        if (element !== bolElegida) {
-          let bolUnica = bolElegida;
-          bolillasElegidas.push(bolUnica);
-          $('#' + bolUnica).addClass('elegida');
-        }else{
+        if (element === bolElegida) {
           elegirBolilla();
+          unica = false;          
+        }else{
+          esRepetida = true;
         }
       });
+      if (esRepetida) {
+        bolillasElegidas.push(bolElegida);
+       $('#' + bolElegida).addClass('elegida');
+     }
     }
+);
+    
     // function elegirBolilla () {
     //   let bolElegida = Math.floor(Math.random() * 90);
     //   console.log('random' + bolElegida);
@@ -37,5 +43,4 @@ let bolillasElegidas = [91];
     //     }
     //   });
     // }
-  );
 
