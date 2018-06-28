@@ -9,9 +9,13 @@
   font-size: 15px;
   font-weight: bold;
 }
+html,
 body {
   background: #ffd700;
   font-family: firacode;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 main {
   text-align: center;
@@ -35,10 +39,10 @@ main .ultima {
   animation: pulse 1s infinite;
 }
 footer {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
   background: rgba(255,20,147,0.9);
 }
 footer .tombola {
